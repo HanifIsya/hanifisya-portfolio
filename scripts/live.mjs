@@ -1,0 +1,18 @@
+import { chromium } from "playwright";
+const b = await chromium.launch({ channel: "chrome" });
+const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+const errs = [];
+p.on("pageerror", e => errs.push(e.message));
+p.on("console", m => { if (m.type()==="error") errs.push(m.text()); });
+const resp = await p.goto("https://hanifisya-portfolio.vercel.app", { waitUntil: "networkidle", timeout: 90000 });
+console.log("HTTP", resp.status());
+await p.waitForTimeout(2500);
+const og = await p.evaluate(() => document.querySelector('meta[property="og:url"]')?.content);
+const title = await p.title();
+const h1 = await p.evaluate(()=>document.querySelector("h1")?.textContent);
+console.log("title:", title);
+console.log("og:url:", og);
+console.log("h1:", h1);
+console.log("errors:", errs.length ? errs.slice(0,5) : "none");
+await p.screenshot({ path: "qa/live-hero.png" });
+await b.close();

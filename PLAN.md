@@ -273,22 +273,39 @@ Every animation is **fluid, interruptible, and reduced-motion aware**.
 - [x] Screenshot review → 7 design fixes applied (artwork saturation, card spacing,
       nav contrast, velocity bar height, logo duplication, monogram collisions, mobile menu)
 
-### Phase 6 — Ship ⏳
-- [ ] Create GitHub repo `HanifIsya/hanifisya-portfolio`
-- [ ] Push code
-- [ ] Connect + deploy via Vercel MCP
-- [ ] Verify live URL
+### Phase 6 — Ship ✅
+- [x] Create GitHub repo `HanifIsya/hanifisya-portfolio` (public)
+- [x] Push code (2 commits on `main`)
+- [x] Create Vercel project + link GitHub repo (`team: hanif14`, `productionBranch: main`)
+- [x] Production deployment READY
+- [x] Live URL verified: **https://hanifisya-portfolio.vercel.app**
+- [x] Auto-deploy confirmed — a second push triggered a new deployment via the
+      GitHub webhook with no manual action
+- [x] Live QA re-run against production: 0 console errors, 0 horizontal overflow,
+      desktop + mobile
 
 ---
 
 ## 8. Open Items / Placeholders (user to edit later)
 
-Marked `TODO` in `src/data/site.ts`:
-- Tagline / one-line role statement
-- Location
-- Email
-- LinkedIn / X / Instagram handles
-- Availability status
+Marked `// TODO` in `src/data/site.ts`:
+
+| Field | Current value | Action |
+|---|---|---|
+| `role` | "Full-stack & AI Engineer" | Confirm or replace |
+| `tagline` | "I build AI extraction pipelines…" | Personalise |
+| `bio` | 1 sentence | Expand to 2–3 sentences |
+| `location` | "Surabaya, Indonesia" | Confirm or replace |
+| `email` | hanifisya.annafi02@gmail.com | Confirm |
+| `availability` | "Open to new opportunities" | Update status |
+| `socials` | GitHub + Email only | Add LinkedIn / X / Instagram |
+
+**Also worth doing:**
+- Replace `public/avatar.png` — the current file is GitHub's default `H`
+  identicon. Drop a real photo at the same path and it updates everywhere.
+- The journey timeline in `src/components/about.tsx` (`TIMELINE`) is written
+  from the repo history — adjust the dates and wording to match your story.
+- Optionally add a custom domain in the Vercel dashboard.
 
 ---
 
@@ -306,3 +323,6 @@ Marked `TODO` in `src/data/site.ts`:
   `position: fixed` resolves against the viewport).
 - **v1.3** — Lint clean (0/0), build static, reduced-motion + a11y verified,
   mobile menu interaction verified end to end.
+- **v1.4** — Shipped. GitHub repo created, Vercel project created and linked to
+  `main`, production deployment READY at `hanifisya-portfolio.vercel.app`.
+  GitHub auto-deploy confirmed with a second push.
