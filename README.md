@@ -3,7 +3,7 @@
 Personal portfolio for **Hanif Isya Annafi** — built with Next.js 16, React 19,
 Tailwind CSS 4, and GSAP 3.
 
-**Live:** _TBD (Vercel)_
+**Live:** https://hanifisya-portfolio.vercel.app
 
 ---
 

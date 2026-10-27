@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hanifisya.dev"),
+  metadataBase: new URL("https://hanifisya-portfolio.vercel.app"),
   title: {
     default: `${site.name} — Software Engineer`,
     template: `%s — ${site.name}`,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: `${site.name} — Software Engineer`,
     description:
       "AI extraction pipelines, safety-critical systems, and production web platforms.",
-    url: "https://hanifisya.dev",
+    url: "https://hanifisya-portfolio.vercel.app",
     siteName: site.name,
     images: [{ url: "/avatar.jpg", width: 460, height: 460 }],
   },
